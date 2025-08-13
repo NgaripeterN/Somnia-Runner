@@ -2,8 +2,6 @@
 
 A simple endless runner game built with Vite, React, TypeScript, and HTML5 Canvas. This project is inspired by the classic Chrome Dino game and serves as the foundation for a future Web3-integrated version using the Somnia platform.
 
-![Somnia Runner Gameplay](https://i.imgur.com/r5a7h0J.png) 
-> Note: This is a placeholder image. You can create a real screenshot once the game is running.
 
 ## Features
 

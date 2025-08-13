@@ -1,0 +1,9 @@
+// src/components/GameCanvas.module.scss
+.gameCanvas {
+  border: 2px solid var(--ground-color);
+  background-color: #90EE90; // Light Green
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

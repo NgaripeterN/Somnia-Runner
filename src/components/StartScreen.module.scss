@@ -1,0 +1,25 @@
+// src/components/StartScreen.module.scss
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 247, 247, 0.8);
+  z-index: 10;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.instructions {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}

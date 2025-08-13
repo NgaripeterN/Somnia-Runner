@@ -1,0 +1,31 @@
+// src/components/GameOverScreen.module.scss
+.gameOverScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 247, 247, 0.8);
+  z-index: 10;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #FF0000; /* Red */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.scores {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+
+  p {
+    margin: 0.5rem 0;
+  }
+}

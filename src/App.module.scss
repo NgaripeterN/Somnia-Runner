@@ -1,0 +1,12 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  max-width: 750px;
+  height: 100%;
+  background-color: var(--background-color);
+  position: relative;
+}

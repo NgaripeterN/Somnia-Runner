@@ -1,101 +1,65 @@
-# Somnia Runner
+# Somnia Runner Monorepo
 
-A simple endless runner game built with Vite, React, TypeScript, and HTML5 Canvas. This project is inspired by the classic Chrome Dino game and serves as the foundation for a future Web3-integrated version using the Somnia platform.
-
-
-## Features
-
-- Endless running and jumping mechanics.
-- Increasing difficulty with obstacle speed and spawn rate.
-- Local high score persistence using `localStorage`.
-- Minimalist, pixel-art inspired design.
-- Fully tested with Jest and React Testing Library.
+A Web3-ready endless runner game built with Vite, React, TypeScript, and HTML5 Canvas. This project is structured as a monorepo to accommodate frontend development, backend services, and smart contracts for the Somnia platform.
 
 ## Project Structure
 
-The project is organized with a clear separation of concerns:
+The repository is organized into workspaces:
 
-```
-/src
-├── /assets           # Static assets like sprites and images
-├── /components       # React components (GameCanvas, UI screens)
-├── /hooks            # Custom React hooks (useAnimationFrame, useKeyboard)
-├── /utils            # Core game logic (physics, collision, spawning)
-├── /__tests__        # Jest/RTL tests for utils and components
-├── App.tsx           # Main application component (game state machine)
-├── main.tsx          # Application entry point
-└── index.css         # Global styles and CSS variables
-```
+- **`frontend/`**: The React-based game application.
+- **`backend/`**: (Placeholder) Future Node.js/Express backend for leaderboards or user data.
+- **`contracts/`**: (Placeholder) Future Solidity smart contracts for on-chain features.
+
+### Frontend Details
+
+Located in `/frontend`, the game features:
+- Endless running and jumping mechanics.
+- Increasing difficulty with obstacle speed and spawn rate.
+- Local high score persistence.
+- Fully tested with Jest and React Testing Library.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or later recommended)
-- [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), or [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/) (v22 recommended)
+- [npm](https://www.npmjs.com/) (using npm workspaces)
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/somnia-runner.git
-    cd somnia-runner
+    git clone https://github.com/NgaripeterN/Somnia-Runner.git
+    cd Somnia-Runner
     ```
 
-2.  **Install dependencies:**
+2.  **Install dependencies at the root:**
     ```bash
     npm install
     ```
-    *(Or `yarn install`, `pnpm install`)*
 
 ## Available Scripts
 
-### Run the development server
+Run these scripts from the root directory to manage the workspaces:
 
-To start the game in development mode with hot-reloading:
+### Frontend
 
-```bash
-npm run dev
-```
+- `npm run frontend:dev`: Start the game development server.
+- `npm run frontend:build`: Build the game for production.
+- `npm run frontend:test`: Run frontend unit and component tests.
+- `npm run frontend:lint`: Lint the frontend codebase.
 
-Open [http://localhost:5173](http://localhost:5173) (or the address shown in your terminal) to view it in the browser.
+## Deployment
 
-### Build for production
+This project is configured for deployment on **Netlify**. 
+- The `netlify.toml` file at the root handles building the `frontend` workspace and publishing the `frontend/dist` directory.
+- Build errors related to TypeScript and CSS have been resolved to ensure a smooth CI/CD pipeline.
 
-To create a production-ready build of the application:
+## Roadmap: Web3 Integration
 
-```bash
-npm run build
-```
+The next phase involves integrating with the Somnia blockchain:
 
-The optimized files will be located in the `/dist` directory.
-
-### Run tests
-
-To run the unit and component tests:
-
-```bash
-npm run test
-```
-
-To run tests in watch mode:
-
-```bash
-npm run test:watch
-```
-
-To generate a test coverage report:
-
-```bash
-npm run test:coverage
-```
-The report will be available in the `/coverage` directory.
-
-## Next Steps: Phase 2
-
-The next phase of this project will involve integrating with the Somnia blockchain:
-
--   **Web3 Integration:** Connect the game to user wallets (e.g., MetaMask).
--   **Smart Contract Hooks:** Implement hooks to interact with Somnia's smart contracts.
--   **NFTs as In-Game Items:** Use NFTs for player skins or other cosmetic items.
--   **On-Chain High Scores:** Store high scores on the blockchain to create a global, persistent leaderboard.
+- **Web3 Integration:** Connect to user wallets.
+- **Smart Contracts:** Deploy contracts in the `contracts/` folder for on-chain logic.
+- **NFT Assets:** Use NFTs for in-game items and skins.
+- **On-Chain Leaderboard:** Store high scores on Somnia for a decentralized leaderboard.

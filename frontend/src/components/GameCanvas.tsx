@@ -63,10 +63,18 @@ const GameCanvas: React.FC<GameCanvasProps> = ({ onGameOver, onPause, isPaused }
     const totalAssets = assetSources.length;
 
     assetSources.forEach(asset => {
-      const image = asset.ref instanceof HTMLImageElement ? asset.ref : new Image();
-      if (asset.ref.current === null) {
-        (asset.ref as React.MutableRefObject<HTMLImageElement | null>).current = image;
+      let image: HTMLImageElement;
+      
+      if (asset.ref instanceof HTMLImageElement) {
+        image = asset.ref;
+      } else {
+        const ref = asset.ref as React.MutableRefObject<HTMLImageElement | null>;
+        if (ref.current === null) {
+          ref.current = new Image();
+        }
+        image = ref.current;
       }
+      
       image.src = asset.src;
       image.onload = () => {
         loadedCount++;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
   --background-color: #483D8B; /* Dark Slate Blue */
   --ground-color: #282c34;
@@ -10,8 +12,6 @@
   --white: #ffffff;
   --font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
   background-color: var(--background-color);

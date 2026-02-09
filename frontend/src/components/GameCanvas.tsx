@@ -21,9 +21,6 @@ const JUMP_FRAME = 2;
 const ANIMATION_SPEED = 100; // ms per frame
 const NORMAL_SPEED = 5;
 
-// Colors matching the new CSS theme
-const GROUND_COLOR = '#1a1a2e';
-const TEXT_COLOR = '#ffffff';
 
 const SPEED_INCREASE_FACTOR = 0.5;
 
@@ -156,7 +153,7 @@ const GameCanvas: React.FC<GameCanvasProps> = ({ onGameOver, onPause, isPaused }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = GROUND_COLOR;
+    ctx.fillStyle = 'var(--ground-color)';
     ctx.fillRect(0, GROUND_LEVEL, canvas.width, 2);
 
     const frameWidth = playerImage.current.width / 2;
@@ -177,7 +174,7 @@ const GameCanvas: React.FC<GameCanvasProps> = ({ onGameOver, onPause, isPaused }
       }
     });
 
-    ctx.fillStyle = TEXT_COLOR;
+    ctx.fillStyle = 'var(--text-color-inverted)';
     ctx.font = '20px "Press Start 2P"';
     ctx.textAlign = 'left';
     ctx.fillText(displayedScore.toString().padStart(5, '0'), 10, 30);

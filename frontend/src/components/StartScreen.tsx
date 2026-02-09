@@ -10,8 +10,8 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
   return (
     <div className={styles.startScreen}>
       <h1 className={styles.title}>
-        <span style={{ color: 'var(--primary-accent)' }}>Somnia</span>{' '}
-        <span style={{ color: 'var(--secondary-accent)' }}>Runner</span>
+        <span style={{ color: '#0096FF' }}>Somnia</span>{' '}
+        <span style={{ color: '#FF004D' }}>Runner</span>
       </h1>
       <p className={styles.instructions}>
         Press Space or Arrow Up to Jump
